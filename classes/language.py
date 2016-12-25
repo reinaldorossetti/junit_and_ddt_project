@@ -17,28 +17,24 @@ class language(object):
         self.function = classfunctions.functions()
 
         try:
-            print language
+            print(language)
             self.base_url = BASE_URL
-            time.sleep(DELAY_FAST)
             wait = WebDriverWait(driver, 60)
             for handle in driver.window_handles:
                 driver.switch_to_window(handle)
-            print "Click in button my settings"
+                
+            print("Click in button my settings")
             button_language = wait.until(lambda driver: driver.find_element_by_xpath("/html/body/div[2]/span[2]/a[1]/img"))
             button_language.click()
-            time.sleep(DELAY_FAST)
             #change frame
             for handle in driver.window_handles:
                 driver.switch_to_window(handle)
                 print driver.switch_to_window(handle)
-            time.sleep(DELAY_HIGH)
 
             print "select language: " +str(language)
 
             element = WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH,\
                                             "/html/body/div/form[1]/table/tbody/tr[5]/td/select")))
-            print element
-
             if element:
                 Select(driver.find_element_by_xpath("/html/body/div/form[1]/table/tbody/tr[5]/td/select"))
                 select = Select(driver.find_element_by_xpath("/html/body/div/form[1]/table/tbody/tr[5]/td/select"))
@@ -46,7 +42,7 @@ class language(object):
                 select.select_by_visible_text(language)
                 print driver.find_element_by_xpath("/html/body/div/form[1]/table/tbody/tr[5]/td/select").text
             else:
-                print "Not found the field Language!"
+                print("Not found the field Language!")
                 return False
 
             if driver.find_element_by_xpath("/html/body/div/form[1]/div/input"):
@@ -61,7 +57,5 @@ class language(object):
 
         except:
             self.function.PrintException()
-            pass
-            print "Failed! Test Number: ", test_number, language
-            time.sleep(DELAY_HIGH)
+            print("Failed! Test Number: ", test_number, language)
             return False
