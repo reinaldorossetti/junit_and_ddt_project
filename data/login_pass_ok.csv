@@ -1,0 +1,16 @@
+test_number,test_name,login, password, user_type, browsers
+PA-1,admin,admin,admin,FIREFOX
+PA-6,daniel,daniel123,guest,FIREFOX
+PA-7,jaque,jaque@2015,leader,FIREFOX
+PA-12,alex,test@2015,tester,FIREFOX
+PA-13,luis,luis123,senior tester,FIREFOX
+PA-2,admin,admin,admin,IE
+PA-5,daniel,daniel123,guest,IE
+PA-8,jaque,jaque@2015,leader,IE
+PA-11,alex,test@2015,tester,IE
+PA-15,luis,luis123,senior tester,IE
+PA-3,admin,admin,admin,CHROME
+PA-4,daniel,daniel123,guest,CHROME
+PA-9,jaque,jaque@2015,leader,CHROME
+PA-10,alex,test@2015,tester,CHROME
+PA-14,luis,luis123,senior tester,CHROME

@@ -1,0 +1,7 @@
+test_number,menu_name, project_name, prefix, language
+019,Test Project Management,Selenium Automation,SA,FIREFOX,English (US)
+016,Gerenciar Projeto de Teste,Selenium Automation,SA,FIREFOX,Portuguese (Brazil)
+017,Gerenciar Projeto de Teste,Positivo Automation,PA,CHROME,Portuguese (Brazil)
+020,Test Project Management,Positivo Automation,PA,CHROME,English (US)
+021,Test Project Management,Test Automation,TA,IE,English (US)
+018,Gerenciar Projeto de Teste,Test Automation,TA,IE,Portuguese (Brazil)

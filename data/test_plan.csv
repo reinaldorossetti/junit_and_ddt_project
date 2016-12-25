@@ -1,0 +1,7 @@
+test_number,menu_name, project_name, test_browser,language
+022,Gerenciar Plano de Teste,Sanity Test,FIREFOX,Portuguese (Brazil)
+025,Test Plan Management,Sanity Test,FIREFOX,English (US)
+026,Test Plan Management,Sanity Test,CHROME,English (US)
+023,Gerenciar Plano de Teste,Sanity Test,CHROME,Portuguese (Brazil)
+024,Gerenciar Plano de Teste,Sanity Test,IE,Portuguese (Brazil)
+027,Test Plan Management,Sanity Test,IE,English (US)
