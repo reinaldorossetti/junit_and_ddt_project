@@ -24,7 +24,7 @@ class loginTest(classes.common_functions.functions,object):
         self.base_url = BASE_URL
         self.driver = driver
         wait = WebDriverWait(self.driver, 90)
-        time.sleep(4)
+        self.driver.implicitly_wait(15)
 
         try:
             self.driver.get(self.base_url+ LOGIN_PAGE)
@@ -39,30 +39,21 @@ class loginTest(classes.common_functions.functions,object):
             elem.send_keys(tl_password)
             # This is similar to entering keys using your keyboard.
             elem.send_keys(Keys.RETURN)
-            time.sleep(DELAY_FAST)
-            # timeout five seconds
-            time.sleep(DELAY_FAST)
             self.driver.get(self.base_url+ MAIN_MENU)
-            print "\nTest: ", tl_login, tl_password, user_type, browser_type
-            time.sleep(DELAY_FAST)
+            print ("\nTest: ", tl_login, tl_password, user_type, browser_type)
             confirm = wait.until(lambda driver: driver.find_element_by_xpath\
                 ("/html/body/div[2]/span[contains(text(),'"+user_type+"')]" ))
-            print  confirm.text
+            print(confirm.text)
             elem_test = str(confirm.text)
-            time.sleep(DELAY_FAST)
             # split text in two words in the string.
             elem_test = elem_test.split(" ", 1)
-            time.sleep(DELAY_FAST)
-            print "Tag value: " + str(elem_test)
+            print ("Tag value: " + str(elem_test))
             # compare second word with user_type
             if elem_test[1] == "["+user_type+"]":
-                    time.sleep(DELAY_FAST)
                     return elem_test[1]
             else:
                 return False
 
         except (RuntimeError, TypeError, NameError):
-            pass
-            print "Failed! Test Number: ", tl_login, tl_password, user_type
-            time.sleep(DELAY_HIGH)
+            print("Failed! Test Number: ", tl_login, tl_password, user_type)
             return False
